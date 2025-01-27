@@ -32,7 +32,6 @@ struct UserSettingsView: View {
     var body: some View {
         VStack {
             HStack {
-                settingsCancelButton
                 Spacer()
                 settingsSaveButton
             }
@@ -75,7 +74,9 @@ struct UserSettingsView: View {
                 Spacer()
             }
         }
-        .background(Color.indigo)
+        .padding(.top, 44) // Например, 44 для стандартной высоты status bar
+        .ignoresSafeArea()
+//        .background(Color.green)
     }
     
     var settingsSaveButton: some View {
@@ -86,13 +87,6 @@ struct UserSettingsView: View {
         }
     }
     
-    var settingsCancelButton: some View {
-        Button(action: {}) {
-            Text("Отменить")
-                .padding(.horizontal, 30)
-                .padding(.top, 22)
-        }
-    }
     
     var profileImage: some View {
         Image(systemName: "swift")

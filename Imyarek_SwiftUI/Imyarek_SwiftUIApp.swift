@@ -11,7 +11,7 @@ import SwiftUI
 struct Imyarek_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            UserSettingsView()
+            MainView()
         }
     }
 }

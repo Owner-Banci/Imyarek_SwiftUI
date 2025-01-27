@@ -8,36 +8,44 @@ struct ContentView: View {
                                                "Настройки 2",
                                                "Настройки 3",
                                                "Настройки 4")
+    
+    @State private var navigateToSecondView = false
 
     var body: some View {
-        VStack {
-            HStack {
-                Spacer() // Отодвигает кнопку вправо
-                profileEditButton
+        NavigationStack {
+            VStack {
+                HStack {
+                    Spacer() // Отодвигает кнопку вправо
+                    profileEditButton
+                    
+                }
+                profileImage
+                profileName
+                profileGender
+                profileDescriptionEditButton
+                promoButton
+                profileSettingsList
+                Spacer() // Чтобы кнопка оставалась сверху
+                
                 
             }
-            profileImage
-            profileName
-            profileGender
-            profileDescriptionEditButton
-            promoButton
-            profileSettingsList
-            Spacer() // Чтобы кнопка оставалась сверху
-            
-            
         }
-        .edgesIgnoringSafeArea(.all) // Убираем ограничения Safe Area
     }
     
     var profileEditButton: some View {
         Button(
-            action: {},
+            action: {
+                navigateToSecondView = true
+            },
             label: {
                 Text("Изменить")
                     .padding(.trailing, 40) // Отступ от края
-                    .padding(.top, 22) // Отступ от верхнего края
             }
+            
         )
+        .navigationDestination(isPresented: $navigateToSecondView) {
+            UserSettingsView()
+        }
     }
     
     var profileImage: some View {
@@ -46,7 +54,6 @@ struct ContentView: View {
             .frame(width: 130, height: 130)
             .background(Color.blue)
             .cornerRadius(65)
-            .padding(20)
     }
     
     var profileName: some View {
@@ -133,9 +140,7 @@ struct ContentView: View {
 
 
 
+
 #Preview {
     ContentView()
-//    TestView()
 }
-
-
