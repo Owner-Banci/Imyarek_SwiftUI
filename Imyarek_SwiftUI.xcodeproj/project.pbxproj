@@ -50,6 +50,16 @@
 			path = Imyarek_SwiftUIUITests;
 			sourceTree = "<group>";
 		};
+		E84BFF642DAA481C00247796 /* Services  */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Services ";
+			sourceTree = "<group>";
+		};
+		E84CB7262D8F618C00B7A049 /* Scenes */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,8 @@
 		B48749F52CEDA31C00E0F3F8 = {
 			isa = PBXGroup;
 			children = (
+				E84BFF642DAA481C00247796 /* Services  */,
+				E84CB7262D8F618C00B7A049 /* Scenes */,
 				B4990A602D4739B100B7A57B /* .gitignore */,
 				B4874A002CEDA31C00E0F3F8 /* Imyarek_SwiftUI */,
 				B4874A112CEDA31E00E0F3F8 /* Imyarek_SwiftUITests */,
@@ -115,6 +127,8 @@
 			);
 			fileSystemSynchronizedGroups = (
 				B4874A002CEDA31C00E0F3F8 /* Imyarek_SwiftUI */,
+				E84BFF642DAA481C00247796 /* Services  */,
+				E84CB7262D8F618C00B7A049 /* Scenes */,
 			);
 			name = Imyarek_SwiftUI;
 			packageProductDependencies = (
@@ -403,8 +417,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Imyarek_SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = D2DH8TV7AY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Imyarek-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -431,8 +447,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Imyarek_SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = D2DH8TV7AY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Imyarek-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

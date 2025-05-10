@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct Imyarek_SwiftUIApp: App {
+    init() {
+        _ = DatabaseService.shared
+    }
+    
     var body: some Scene {
         WindowGroup {
             MainView()
