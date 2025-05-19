@@ -203,14 +203,14 @@ struct ChatView: View {
     var chatHeader: some View {
         HStack {
             Text("Имярек")
-                .font(.system(.headline, design: .serif))
+                .font(.system(.headline, design: .monospaced))
             Spacer()
             Button(action: {
                 showComplaintDialog = true
             }) {
                 Text("Пожаловаться")
                     .foregroundColor(.red)
-                    .font(.system(.body, design: .serif))
+                    .font(.system(.body, design: .monospaced))
             }
             .confirmationDialog(
                         "Укажите причину для жалобы",
@@ -224,7 +224,7 @@ struct ChatView: View {
                         }
                         Button("Отмена", role: .cancel) {
                 }
-                        .font(.system(.body, design: .serif))
+                        .font(.system(.body, design: .monospaced))
                         
             }
         }
@@ -243,7 +243,7 @@ struct ChatView: View {
                 .foregroundColor(isCurrentUser ? Color(.white)   
                                  : Color(.black).opacity(0.7))
                 .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: isCurrentUser ? .trailing : .leading)
+                .frame(minWidth: 44, alignment: isCurrentUser ? .trailing : .leading)
                 .cornerRadius(20)
             if !isCurrentUser { Spacer() }
         }
@@ -254,10 +254,10 @@ struct ChatView: View {
         VStack {
             Text("О собеседнике")
                 .padding(.bottom, 4)
-                .font(.system(.headline, design: .serif))
+                .font(.system(.headline, design: .monospaced))
             Text("Ищу собеседника для интересного общения!")
                 .foregroundColor(.gray)
-                .font(.system(.subheadline, design: .serif))
+                .font(.system(.subheadline, design: .monospaced))
         }
         .padding()
         .background(Color(.secondarySystemBackground))
@@ -299,7 +299,7 @@ struct ChatView: View {
                 TextField("Введите сообщение...", text: $newMessage)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .cornerRadius(20)
-                    .font(.system(.body, design: .serif))
+                    .font(.system(.body, design: .monospaced))
                 
                 Button(action: {
                     Task {
@@ -368,19 +368,19 @@ struct ChatView: View {
                 Button("Предложить дружбу") {
                 }
                 .buttonStyle(FilledActionButtonStyle(color: .red))
-                .font(.system(.body, design: .serif))
+                .font(.system(.body, design: .monospaced))
                 
                 Button("Завершить чат") {
                     bottomState = .ended
                 }
                 .buttonStyle(FilledActionButtonStyle(color: Color(.secondarySystemBackground)))
-                .font(.system(.body, design: .serif))
+                .font(.system(.body, design: .monospaced))
                 
                 Button("Новый собеседник") {
                     bottomState = .typing
                 }
                 .buttonStyle(FilledActionButtonStyle(color: Color(.secondarySystemBackground)))
-                .font(.system(.body, design: .serif))
+                .font(.system(.body, design: .monospaced))
             }
             .padding(15)
             .background(Color(.secondarySystemBackground))
@@ -389,23 +389,23 @@ struct ChatView: View {
             VStack(spacing: 8) {
                 Text("Ваш собеседник завершил чат")
                     .foregroundColor(.secondary)
-                    .font(.system(.body, design: .serif))
+                    .font(.system(.body, design: .monospaced))
                 
                 Button("Пожаловаться") {
                 }
                 .buttonStyle(FilledActionButtonStyle(color: .red))
-                .font(.system(.body, design: .serif))
+                .font(.system(.body, design: .monospaced))
                 
                 Button("Завершить чат") {
                 }
                 .buttonStyle(FilledActionButtonStyle(color: Color(.secondarySystemBackground)))
-                .font(.system(.body, design: .serif))
+                .font(.system(.body, design: .monospaced))
                 
                 Button("Новый собеседник") {
                     bottomState = .typing
                 }
                 .buttonStyle(FilledActionButtonStyle(color: Color(.secondarySystemBackground)))
-                .font(.system(.body, design: .serif))
+                .font(.system(.body, design: .monospaced))
             }
             .padding()
         }

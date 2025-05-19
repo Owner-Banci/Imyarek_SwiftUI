@@ -34,6 +34,16 @@
 		B4990A602D4739B100B7A57B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E8B091C82DD9159600C02668 /* Exceptions for "Scenes" folder in "Imyarek_SwiftUI" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			platformFiltersByRelativePath = {
+				UserProfileScene/Models/UserProfileModel.swift = (ios, );
+			};
+			target = B48749FD2CEDA31C00E0F3F8 /* Imyarek_SwiftUI */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B4874A002CEDA31C00E0F3F8 /* Imyarek_SwiftUI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -57,6 +67,9 @@
 		};
 		E84CB7262D8F618C00B7A049 /* Scenes */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E8B091C82DD9159600C02668 /* Exceptions for "Scenes" folder in "Imyarek_SwiftUI" target */,
+			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};

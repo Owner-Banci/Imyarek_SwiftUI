@@ -7,9 +7,9 @@ final class DatabaseService {
     // Создаём статическую переменную для доступа к единственному экземпляру класса
     static let shared = DatabaseService()
     
-    private var db: OpaquePointer? // Указатель на базу данных
+    internal var db: OpaquePointer? // Указатель на базу данных
     // Создаём последовательную очередь для выполнения операций с базой
-    private let queue = DispatchQueue(label: "com.imyarek.database.queue", qos: .utility)
+    internal let queue = DispatchQueue(label: "com.imyarek.database.queue", qos: .utility)
     
     // Приватный инициализатор, который вызывается при создании экземпляра класса
     private init() {
@@ -91,7 +91,7 @@ final class DatabaseService {
     
     // Функция для выполнения SQL-запроса
     @discardableResult
-    private func executeSQL(_ sql: String) -> Bool {
+    internal func executeSQL(_ sql: String) -> Bool {
         var errorMessage: UnsafeMutablePointer<Int8>? = nil // Указатель на сообщение об ошибке
         let result = sqlite3_exec(db, sql, nil, nil, &errorMessage) // Выполняем SQL-запрос
         if result != SQLITE_OK, let errorMessage = errorMessage {
